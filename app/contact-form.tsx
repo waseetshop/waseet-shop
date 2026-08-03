@@ -19,7 +19,7 @@ export default function ContactForm() {
       <label><span>نوع المشروع</span><select name="projectType" defaultValue="" required><option value="" disabled>اختر نوع المشروع</option><option>موقع شركة أو مؤسسة</option><option>متجر إلكتروني</option><option>صفحة هبوط</option><option>تطبيق ويب مخصص</option><option>أخرى</option></select></label>
       <label><span>الميزانية المتوقعة</span><select name="budget" defaultValue="" required><option value="" disabled>اختر النطاق المناسب</option><option>أقل من 5,000 ر.س</option><option>5,000 — 10,000 ر.س</option><option>10,000 — 25,000 ر.س</option><option>أكثر من 25,000 ر.س</option></select></label>
       <label><span>أخبرنا عن فكرتك</span><textarea name="details" rows={4} placeholder="ما الذي تريد بناءه؟ وما أهم هدف للمشروع؟" /></label>
-      <button type="submit">إرسال طلب الاستشارة <span>←</span></button>
+      <button type="submit">احجز جلسة اكتشاف مجانية <span>←</span></button>
       <p className="form-status" role="status" aria-live="polite">{message}</p>
     </form>
   );
