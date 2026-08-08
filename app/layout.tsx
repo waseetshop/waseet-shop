@@ -12,12 +12,30 @@ const tajawal = Tajawal({
 const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://waseet-shop.vercel.app";
 const title = "وسيط شوب | تصميم وتطوير المواقع والمنصات الرقمية";
 const description = "استوديو رقمي يصمّم ويطوّر للشركات السعودية مواقع ومتاجر وتطبيقات ويب سريعة وموثوقة تساعد العملاء على اتخاذ القرار.";
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "وسيط شوب",
+  alternateName: "Waseet Shop",
+  url: origin,
+  logo: new URL("/logo.svg", origin).toString(),
+  email: "waseetshop@gmail.com",
+  telephone: "+966560301744",
+  description,
+  sameAs: [
+    "https://www.instagram.com/waseetshop",
+    "https://www.tiktok.com/@waseetshop",
+    "https://x.com/waseetshop",
+    "https://t.me/waseetshop",
+    "https://www.facebook.com/waseetshop1",
+  ],
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(origin),
   title,
   description,
-  icons: { icon: "/logo.png", apple: "/logo.png" },
+  icons: { icon: "/logo.svg", apple: "/logo.png" },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
@@ -32,5 +50,15 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="ar" dir="rtl" className={tajawal.variable}><body>{children}</body></html>;
+  return (
+    <html lang="ar" dir="rtl" className={tajawal.variable}>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        {children}
+      </body>
+    </html>
+  );
 }

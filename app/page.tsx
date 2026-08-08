@@ -50,6 +50,15 @@ const projects = [
     accent: "violet",
     deliverables: ["لوحة الإدارة", "حسابات المستأجرين", "متابعة الوحدات"],
   },
+  {
+    title: "لحظة لياقة — Fit Moment",
+    category: "منصة نادي لياقة ومتجر رقمي",
+    description: "تجربة رقمية لنادٍ نسائي تجمع التعريف بالبرامج والجدول والتسجيل والمتجر في مكان واحد.",
+    image: "/project-fit-moment.png",
+    href: "https://fit-moment-web.pages.dev/",
+    accent: "magenta",
+    deliverables: ["موقع تعريفي", "تسجيل المتدربات", "متجر إلكتروني", "لوحة دخول"],
+  },
 ];
 
 const process = [
@@ -59,12 +68,48 @@ const process = [
   ["04", "نطلق", "نختبر التفاصيل، نربط النطاق، ونبقى معك بعد الإطلاق للدعم والتحسين."],
 ];
 
+const benefits = [
+  "ملكية كاملة للمشروع",
+  "متوافق مع الجوال",
+  "لوحة إدارة سهلة",
+  "ربط النطاق والاستضافة",
+  "تدريب بعد التسليم",
+  "دعم بعد الإطلاق",
+];
+
+const handoff = [
+  "ملفات التصميم المتفق عليها",
+  "الموقع أو المنصة جاهزة للإطلاق",
+  "لوحة الإدارة والحسابات",
+  "ربط النطاق والاستضافة",
+  "دليل استخدام وتدريب",
+  "فترة دعم واضحة في العرض",
+];
+
+const faqs = [
+  ["كم تستغرق مدة التنفيذ؟", "تتحدد المدة بعد جلسة الاكتشاف وفق حجم المحتوى والوظائف والتكاملات، ثم تظهر بوضوح في خطة المشروع قبل البدء."],
+  ["هل أملك الموقع والكود؟", "نعم، تُسلّم الملفات والحسابات المتفق عليها بعد اكتمال المشروع، ويكون النطاق والاستضافة تحت ملكيتك."],
+  ["هل تساعدون في كتابة المحتوى؟", "نساعد في هيكلة الصفحات وصياغة الرسائل الأساسية، ويمكن إدراج كتابة المحتوى الكاملة ضمن نطاق المشروع."],
+  ["هل يمكن تطوير موقع قائم؟", "نعم، نبدأ بمراجعة الموقع الحالي ثم نحدد ما إذا كان الأنسب تحسينه أو إعادة بنائه دون افتراض حل مسبق."],
+  ["ماذا يحدث بعد الإطلاق؟", "نقدّم تدريبًا وتسليمًا منظمًا وفترة دعم متفقًا عليها، مع إمكانية إضافة خطة عناية أو تطوير مستمر."],
+];
+
+const socialLinks = [
+  { label: "إنستغرام", href: "https://www.instagram.com/waseetshop", icon: "/instagram icon.svg" },
+  { label: "تيك توك", href: "https://www.tiktok.com/@waseetshop", icon: "/tiktok icon.png" },
+  { label: "X", href: "https://x.com/waseetshop", icon: "/x icon.svg" },
+  { label: "واتساب", href: "https://wa.me/966560301744", icon: "/whatsapp icon.svg" },
+  { label: "قناة تيليجرام", href: "https://t.me/waseetshop", icon: "/telegram icon.svg" },
+  { label: "فيسبوك", href: "https://www.facebook.com/waseetshop1", icon: "/Facebook icon.svg" },
+  { label: "البريد الإلكتروني", href: "mailto:waseetshop@gmail.com", icon: "/gmail icon.svg" },
+];
+
 export default function Home() {
   return (
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="وسيط شوب - الرئيسية">
-          <Image className="brand-logo" src="/logo.png" alt="" width={46} height={46} priority />
+          <Image className="brand-logo" src="/logo.svg" alt="" width={46} height={46} priority />
           <span className="brand-copy">
             <strong>وسيط شوب</strong>
             <small>تصميم وتطوير المنتجات الرقمية</small>
@@ -75,6 +120,7 @@ export default function Home() {
           <a href="#work">أعمالنا</a>
           <a href="#process">كيف نعمل</a>
           <a href="#about">عن وسيط</a>
+          <a href="#faq">الأسئلة الشائعة</a>
         </nav>
         <a className="header-cta" href="#contact">
           احجز جلسة اكتشاف مجانية <span>↗</span>
@@ -85,6 +131,8 @@ export default function Home() {
             <a href="#services">خدماتنا</a>
             <a href="#work">أعمالنا</a>
             <a href="#process">كيف نعمل</a>
+            <a href="#about">عن وسيط</a>
+            <a href="#faq">الأسئلة الشائعة</a>
             <a href="#contact">احجز جلسة اكتشاف مجانية</a>
           </nav>
         </details>
@@ -95,6 +143,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow"><span /> تصميم وتطوير مواقع ومنصات للشركات السعودية</p>
           <h1>نبني موقعًا يحوّل حضور شركتك<br /><em>إلى فرص حقيقية.</em></h1>
+          <p className="hero-audience">للشركات والمنصات التي تحتاج أكثر من قالب جاهز.</p>
           <p className="hero-text">
             من استراتيجية المحتوى وتجربة المستخدم إلى التصميم والتطوير والإطلاق، نصنع منصات سريعة وموثوقة تعكس علامتك وتساعد عملاءك على اتخاذ القرار.
           </p>
@@ -102,7 +151,7 @@ export default function Home() {
             <a className="button button-primary" href="#contact">احجز جلسة اكتشاف مجانية <span>←</span></a>
             <a className="button button-ghost" href="#work">استعرض الأعمال</a>
           </div>
-          <p className="hero-trust"><span>تصميم مخصص</span><i /><span>أداء سريع</span><i /><span>دعم بعد الإطلاق</span></p>
+          <p className="hero-trust"><span>تصميم مخصص</span><i /><span>ملكية كاملة</span><i /><span>دعم بعد الإطلاق</span></p>
         </div>
 
         <div className="hero-visual" aria-label="معاينة مشروع رقمي على الحاسوب والجوال">
@@ -118,7 +167,7 @@ export default function Home() {
             <span className="phone-notch" />
             <Image src="/project-rawasi-dark.png" alt="عرض متجاوب لمنصة رواسي دارك" fill sizes="170px" />
           </div>
-          <div className="float-card float-speed"><span>UX</span><p><b>تصميم وتجربة</b><small>مبنية حول المستخدم</small></p></div>
+          <div className="float-card float-speed"><span>UX</span><p><b>تصميم وتجربة مبنية حول المستخدم</b></p></div>
           <div className="float-card float-live"><i /><span>تطوير متجاوب لكل الشاشات</span></div>
         </div>
 
@@ -130,8 +179,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about section" id="about">
-        <div className="section-label"><span>01</span> لماذا وسيط؟</div>
+      <section className="work section" id="work">
+        <div className="section-heading dark-text">
+          <div><div className="section-label"><span>01</span> أعمال مختارة</div><h2>من الفكرة إلى منتج<br /><em>يعمل في العالم الحقيقي.</em></h2></div>
+          <p>نماذج حقيقية من قطاعات العقار والتجارة واللياقة وإدارة الممتلكات.</p>
+        </div>
+        <div className="projects">
+          {projects.map((project, index) => (
+            <a className={`project-card ${project.accent}`} href={project.href} target="_blank" rel="noreferrer" key={project.title}>
+              <div className="project-preview">
+                <div className="browser-bar"><span /><span /><span /><small>{project.href.replace("https://", "")}</small></div>
+                <Image src={project.image} alt={`معاينة مشروع ${project.title}`} fill sizes="(max-width: 800px) 100vw, 50vw" />
+              </div>
+              <div className="project-meta">
+                <span>0{index + 1}</span>
+                <div><small>{project.category}</small><h3>{project.title}</h3><p>{project.description}</p><div className="project-deliverables">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div></div>
+                <b aria-label="زيارة المشروع">↗</b>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section className="about section" id="why">
+        <div className="section-label"><span>02</span> لماذا وسيط؟</div>
         <div className="about-grid">
           <h2>لا نبني صفحات جميلة فقط.<br /><em>نبني أداة نمو.</em></h2>
           <div className="about-copy">
@@ -148,7 +219,7 @@ export default function Home() {
 
       <section className="services section" id="services">
         <div className="section-heading">
-          <div><div className="section-label light"><span>02</span> خدماتنا</div><h2>كل ما تحتاجه لبناء<br /><em>حضور رقمي مؤثر.</em></h2></div>
+          <div><div className="section-label light"><span>03</span> خدماتنا</div><h2>كل ما تحتاجه لبناء<br /><em>حضور رقمي مؤثر.</em></h2></div>
           <p>من الواجهة الأولى إلى النظام الخلفي، ننفذ التجربة كاملة بمعايير احترافية.</p>
         </div>
         <div className="service-list">
@@ -161,31 +232,9 @@ export default function Home() {
             </article>
           ))}
         </div>
-        <div className="tech-bar">
-          <p><small>بنية تقنية موثوقة</small>أدوات عالمية. تنفيذ محلي محترف.</p>
-          <div className="tech-logos"><span>▲ Vercel</span><span>◈ Supabase</span><span>◉ GitHub</span><span>GoDaddy</span></div>
-        </div>
-      </section>
-
-      <section className="work section" id="work">
-        <div className="section-heading dark-text">
-          <div><div className="section-label"><span>03</span> أعمال مختارة</div><h2>من الفكرة إلى منتج<br /><em>يعمل في العالم الحقيقي.</em></h2></div>
-          <p>نماذج من منصات صممناها وطوّرناها لتخدم أهدافًا وتجارب مختلفة.</p>
-        </div>
-        <div className="projects">
-          {projects.map((project, index) => (
-            <a className={`project-card ${project.accent}`} href={project.href} target="_blank" rel="noreferrer" key={project.title}>
-              <div className="project-preview">
-                <div className="browser-bar"><span /><span /><span /><small>{project.href.replace("https://", "")}</small></div>
-                <Image src={project.image} alt={`معاينة مشروع ${project.title}`} fill sizes="(max-width: 800px) 100vw, 50vw" />
-              </div>
-              <div className="project-meta">
-                <span>0{index + 1}</span>
-              <div><small>{project.category}</small><h3>{project.title}</h3><p>{project.description}</p><div className="project-deliverables">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div></div>
-                <b aria-label="زيارة المشروع">↗</b>
-              </div>
-            </a>
-          ))}
+        <div className="benefit-bar" aria-label="مزايا التسليم">
+          <p><small>ما يهمك بعد الإطلاق</small><strong>مشروع واضح الملكية وسهل الإدارة.</strong></p>
+          <div className="benefit-list">{benefits.map((benefit) => <span key={benefit}>✓ {benefit}</span>)}</div>
         </div>
       </section>
 
@@ -203,24 +252,70 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="handoff section" id="handoff">
+        <div className="section-heading dark-text">
+          <div><div className="section-label"><span>05</span> ما الذي ستستلمه؟</div><h2>تسليم منظم.<br /><em>وملكية واضحة.</em></h2></div>
+          <p>نغلق المشروع بتسليم عملي يساعدك على الإدارة والانطلاق بثقة، وفق البنود المحددة في عرضك.</p>
+        </div>
+        <div className="handoff-grid">
+          {handoff.map((item, index) => <article key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></article>)}
+        </div>
+      </section>
+
+      <section className="studio-about section" id="about">
+        <div className="section-label light"><span>06</span> عن وسيط شوب</div>
+        <div className="studio-about-grid">
+          <h2>استوديو رقمي سعودي<br /><em>قريب من عملك.</em></h2>
+          <div>
+            <p>نساعد الشركات والمنصات على تحويل أفكارها إلى تجارب رقمية واضحة وقابلة للنمو. نتولى الاستراتيجية وتجربة المستخدم والتصميم والتطوير ضمن مسار واحد.</p>
+            <ul>
+              <li>تواصل مباشر طوال المشروع.</li>
+              <li>حلول مصممة للاحتياج، لا قوالب جاهزة.</li>
+              <li>تسليم موثّق ودعم واضح بعد الإطلاق.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq section" id="faq">
+        <div className="section-heading dark-text">
+          <div><div className="section-label"><span>07</span> الأسئلة الشائعة</div><h2>إجابات واضحة<br /><em>قبل أن نبدأ.</em></h2></div>
+          <p>تفاصيل أولية تساعدك على معرفة طريقة العمل، بينما تُحسم المدة والنطاق بعد فهم مشروعك.</p>
+        </div>
+        <div className="faq-list">
+          {faqs.map(([question, answer]) => <details key={question}><summary>{question}<span>＋</span></summary><p>{answer}</p></details>)}
+        </div>
+      </section>
+
       <section className="contact section" id="contact">
         <div className="contact-copy">
-          <div className="section-label"><span>05</span> احجز جلسة اكتشاف مجانية</div>
+          <div className="section-label"><span>08</span> احجز جلسة اكتشاف مجانية</div>
           <h2>لديك فكرة تستحق<br /><em>واجهة أقوى؟</em></h2>
           <p>شاركنا تفاصيل مشروعك، وسنرتب معك جلسة قصيرة لفهم الاحتياج واقتراح الخطوة الأنسب.</p>
-          <div className="contact-note"><span>✓</span><p><b>الاستشارة الأولى مجانية</b><small>حديث مباشر وعملي دون التزامات.</small></p></div>
+          <div className="contact-note"><span>✓</span><p><b>الاستشارة الأولى مجانية — حديث مباشر وعملي دون التزامات.</b></p></div>
+          <div className="direct-contact">
+            <a href="https://wa.me/966560301744" target="_blank" rel="noreferrer"><b>واتساب</b><span dir="ltr">0560301744</span></a>
+            <a href="mailto:waseetshop@gmail.com"><b>البريد</b><span>waseetshop@gmail.com</span></a>
+          </div>
         </div>
         <ContactForm />
       </section>
 
       <footer>
         <a className="brand footer-brand" href="#top">
-          <Image className="brand-logo" src="/logo.png" alt="" width={52} height={52} />
+          <Image className="brand-logo" src="/logo.svg" alt="" width={52} height={52} />
           <span className="brand-copy"><strong>وسيط شوب</strong><small>تصميم وتطوير المنتجات الرقمية</small></span>
         </a>
-        <p>استوديو رقمي لتصميم وتطوير المواقع والمنصات<br />التي تحوّل الحضور إلى فرص حقيقية.</p>
-        <div className="footer-links"><a href="#services">الخدمات</a><a href="#work">الأعمال</a><a href="#process">المنهجية</a><a href="#contact">تواصل معنا</a></div>
-        <div className="footer-bottom"><span>© 2026 وسيط شوب. جميع الحقوق محفوظة.</span><a href="#top">العودة للأعلى ↑</a></div>
+        <div className="footer-contact">
+          <p>استوديو رقمي لتصميم وتطوير المواقع والمنصات التي تحوّل الحضور إلى فرص حقيقية.</p>
+          <a href="mailto:waseetshop@gmail.com">waseetshop@gmail.com</a>
+          <a href="tel:+966560301744" dir="ltr">+966 56 030 1744</a>
+        </div>
+        <div className="footer-links"><a href="#services">الخدمات</a><a href="#work">الأعمال</a><a href="#process">المنهجية</a><a href="#about">عن وسيط</a><a href="#faq">الأسئلة الشائعة</a><a href="#contact">تواصل معنا</a></div>
+        <div className="social-links" aria-label="حسابات وسيط شوب">
+          {socialLinks.map((social) => <a href={social.href} target={social.href.startsWith("http") ? "_blank" : undefined} rel={social.href.startsWith("http") ? "noreferrer" : undefined} aria-label={social.label} title={social.label} key={social.label}><Image src={social.icon} alt="" width={22} height={22} /></a>)}
+        </div>
+        <div className="footer-bottom"><span>© 2026 وسيط شوب. جميع الحقوق محفوظة.</span><span><a href="/privacy">سياسة الخصوصية</a> · <a href="/terms">الشروط والأحكام</a> · <a href="#top">العودة للأعلى ↑</a></span></div>
       </footer>
     </main>
   );
