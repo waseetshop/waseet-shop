@@ -14,20 +14,33 @@ const title = "وسيط شوب | تصميم وتطوير المواقع والم
 const description = "استوديو رقمي يصمّم ويطوّر للشركات السعودية مواقع ومتاجر وتطبيقات ويب سريعة وموثوقة تساعد العملاء على اتخاذ القرار.";
 const organizationSchema = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "وسيط شوب",
-  alternateName: "Waseet Shop",
-  url: origin,
-  logo: new URL("/logo.svg", origin).toString(),
-  email: "waseetshop@gmail.com",
-  telephone: "+966560301744",
-  description,
-  sameAs: [
-    "https://www.instagram.com/waseetshop",
-    "https://www.tiktok.com/@waseetshop",
-    "https://x.com/waseetshop",
-    "https://t.me/waseetshop",
-    "https://www.facebook.com/waseetshop1",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${origin}/#organization`,
+      name: "وسيط شوب",
+      alternateName: "Waseet Shop",
+      url: origin,
+      logo: new URL("/logo.svg", origin).toString(),
+      email: "waseetshop@gmail.com",
+      telephone: "+966560301744",
+      description,
+      sameAs: [
+        "https://www.instagram.com/waseetshop",
+        "https://www.tiktok.com/@waseetshop",
+        "https://x.com/waseetshop",
+        "https://t.me/waseetshop",
+        "https://www.facebook.com/waseetshop1",
+      ],
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${origin}/#website`,
+      name: "وسيط شوب",
+      url: origin,
+      inLanguage: "ar-SA",
+      publisher: { "@id": `${origin}/#organization` },
+    },
   ],
 };
 

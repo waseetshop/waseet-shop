@@ -4,25 +4,45 @@ import ContactForm from "./contact-form";
 const services = [
   {
     number: "01",
-    title: "مواقع الشركات",
-    text: "واجهات تعريفية راقية تبني الثقة، توضّح قيمة شركتك، وتحوّل الزيارة إلى فرصة تواصل حقيقية.",
+    title: "لدي شركة وأحتاج موقعًا احترافيًا",
+    text: "نبني موقعًا يشرح قيمة شركتك بوضوح، يعزز الثقة، ويحوّل الزيارة إلى فرصة تواصل حقيقية.",
     tags: ["استراتيجية محتوى", "UI/UX", "تطوير متجاوب", "SEO أساسي", "دعم بعد الإطلاق"],
   },
   {
     number: "02",
-    title: "المتاجر وصفحات الهبوط",
-    text: "تجارب شراء وصفحات حملات مصممة حول رحلة العميل، من أول نقرة حتى اتخاذ القرار.",
+    title: "لدي منتج أو متجر وأريد زيادة التحويل",
+    text: "نصمم رحلة شراء وصفحات حملات تقرّب العميل من القرار، من أول نقرة حتى إتمام الطلب.",
     tags: ["رحلة الشراء", "صفحات المنتجات", "الدفع والشحن", "تتبع التحويل"],
   },
   {
     number: "03",
-    title: "تطبيقات ويب مخصصة",
-    text: "أنظمة ومنصات رقمية تبسّط العمليات وتجمع البيانات وتمنح فريقك مساحة حقيقية للنمو.",
+    title: "لدي فكرة نظام أو منصة",
+    text: "نحوّل المتطلبات إلى نظام واضح يبسط العمليات ويجمع البيانات ويمنح فريقك مساحة للنمو.",
     tags: ["تحليل المتطلبات", "لوحات إدارة", "قواعد بيانات", "تكاملات", "اختبار وأمان"],
+  },
+  {
+    number: "04",
+    title: "لدي موقع قائم لكنه لا يؤدي جيدًا",
+    text: "نراجع المحتوى والتجربة والأداء، ثم نحدد ما يستحق التحسين وما يحتاج إلى إعادة بناء.",
+    tags: ["مراجعة UX", "تحسين المحتوى", "رفع الأداء", "إعادة التصميم", "تطوير مرحلي"],
   },
 ];
 
-const projects = [
+type Project = {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  href: string;
+  accent: string;
+  deliverables: string[];
+  metadata: string;
+  role: string;
+  status?: string;
+  caseStudy?: string;
+};
+
+const projects: Project[] = [
   {
     title: "لحظة فن",
     category: "متجر إلكتروني وتجربة شراء",
@@ -31,6 +51,8 @@ const projects = [
     href: "https://www.art-moment.com/",
     accent: "coral",
     deliverables: ["واجهة المتجر", "رحلة الشراء", "تتبع الطلبات"],
+    metadata: "E-commerce · Custom Platform",
+    role: "UX/UI · Development",
   },
   {
     title: "رواسي دارك العقارية",
@@ -40,6 +62,8 @@ const projects = [
     href: "https://www.rawasi-dark.com/",
     accent: "sand",
     deliverables: ["تجربة المستخدم", "واجهة المنصة", "إدارة العقارات"],
+    metadata: "Real Estate · Web Platform",
+    role: "Strategy · UX/UI · Development",
   },
   {
     title: "مدير العقارات",
@@ -49,6 +73,9 @@ const projects = [
     href: "https://rental-manager-hazel.vercel.app/",
     accent: "violet",
     deliverables: ["لوحة الإدارة", "حسابات المستأجرين", "متابعة الوحدات"],
+    metadata: "PropTech · Web App",
+    role: "Product Design · Development",
+    status: "منتج تجريبي · مشروع داخلي",
   },
   {
     title: "لحظة لياقة — Fit Moment",
@@ -58,6 +85,9 @@ const projects = [
     href: "https://fit-moment-web.pages.dev/",
     accent: "magenta",
     deliverables: ["موقع تعريفي", "تسجيل المتدربات", "متجر إلكتروني", "لوحة دخول"],
+    metadata: "Fitness · Web Platform · 2026",
+    role: "Strategy · UX/UI · Development",
+    caseStudy: "/work/fit-moment",
   },
 ];
 
@@ -78,13 +108,18 @@ const benefits = [
 ];
 
 const handoff = [
-  "ملفات التصميم المتفق عليها",
-  "الموقع أو المنصة جاهزة للإطلاق",
-  "لوحة الإدارة والحسابات",
-  "ربط النطاق والاستضافة",
-  "دليل استخدام وتدريب",
-  "فترة دعم واضحة في العرض",
+  "الكود المصدري كاملًا",
+  "حسابات الاستضافة تحت ملكيتك",
+  "النطاق تحت سيطرتك",
+  "ملفات التصميم عند الاتفاق عليها",
+  "بيانات الدخول موثقة",
+  "لوحة الإدارة مع شرح الاستخدام",
+  "دليل تسليم بروابط المشروع",
+  "تدريب على إدارة المحتوى عند الحاجة",
+  "دعم بعد الإطلاق وفق المدة المتفق عليها",
 ];
+
+const projectFlow = ["الاكتشاف", "المحتوى", "المخطط", "التصميم", "التطوير", "الاختبار", "الإطلاق"];
 
 const faqs = [
   ["كم تستغرق مدة التنفيذ؟", "تتحدد المدة بعد جلسة الاكتشاف وفق حجم المحتوى والوظائف والتكاملات، ثم تظهر بوضوح في خطة المشروع قبل البدء."],
@@ -93,6 +128,16 @@ const faqs = [
   ["هل يمكن تطوير موقع قائم؟", "نعم، نبدأ بمراجعة الموقع الحالي ثم نحدد ما إذا كان الأنسب تحسينه أو إعادة بنائه دون افتراض حل مسبق."],
   ["ماذا يحدث بعد الإطلاق؟", "نقدّم تدريبًا وتسليمًا منظمًا وفترة دعم متفقًا عليها، مع إمكانية إضافة خطة عناية أو تطوير مستمر."],
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map(([question, answer]) => ({
+    "@type": "Question",
+    name: question,
+    acceptedAnswer: { "@type": "Answer", text: answer },
+  })),
+};
 
 const socialLinks = [
   { label: "إنستغرام", href: "https://www.instagram.com/waseetshop", icon: "/instagram icon.svg" },
@@ -107,6 +152,7 @@ const socialLinks = [
 export default function Home() {
   return (
     <main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="وسيط شوب - الرئيسية">
           <Image className="brand-logo" src="/logo.svg" alt="" width={46} height={46} priority />
@@ -186,15 +232,24 @@ export default function Home() {
         </div>
         <div className="projects">
           {projects.map((project, index) => (
-            <a className={`project-card ${project.accent}`} href={project.href} target="_blank" rel="noreferrer" key={project.title}>
+            <a className={`project-card ${project.accent}`} href={project.caseStudy ?? project.href} target={project.caseStudy ? undefined : "_blank"} rel={project.caseStudy ? undefined : "noreferrer"} key={project.title}>
               <div className="project-preview">
                 <div className="browser-bar"><span /><span /><span /><small>{project.href.replace("https://", "")}</small></div>
                 <Image src={project.image} alt={`معاينة مشروع ${project.title}`} fill sizes="(max-width: 800px) 100vw, 50vw" />
               </div>
               <div className="project-meta">
                 <span>0{index + 1}</span>
-                <div><small>{project.category}</small><h3>{project.title}</h3><p>{project.description}</p><div className="project-deliverables">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div></div>
-                <b aria-label="زيارة المشروع">↗</b>
+                <div>
+                  {project.status && <span className="project-status">{project.status}</span>}
+                  <small>{project.category}</small>
+                  <h3>{project.title}</h3>
+                  <p className="project-metadata" dir="ltr">{project.metadata}</p>
+                  <p>{project.description}</p>
+                  <div className="project-role"><b>الدور</b><span dir="ltr">{project.role}</span></div>
+                  <div className="project-deliverables">{project.deliverables.map((item) => <span key={item}>{item}</span>)}</div>
+                  {project.caseStudy && <span className="case-study-link">اقرأ دراسة الحالة ←</span>}
+                </div>
+                <b aria-label={project.caseStudy ? "قراءة دراسة الحالة" : "زيارة المشروع"}>↗</b>
               </div>
             </a>
           ))}
@@ -219,8 +274,8 @@ export default function Home() {
 
       <section className="services section" id="services">
         <div className="section-heading">
-          <div><div className="section-label light"><span>03</span> خدماتنا</div><h2>كل ما تحتاجه لبناء<br /><em>حضور رقمي مؤثر.</em></h2></div>
-          <p>من الواجهة الأولى إلى النظام الخلفي، ننفذ التجربة كاملة بمعايير احترافية.</p>
+          <div><div className="section-label light"><span>03</span> المسار المناسب لك</div><h2>أين مشروعك<br /><em>الآن؟</em></h2></div>
+          <p>اختر الوصف الأقرب إلى مرحلتك، وسنحوّله إلى نطاق واضح بدل إغراقك بالمصطلحات التقنية.</p>
         </div>
         <div className="service-list">
           {services.map((service) => (
@@ -250,12 +305,16 @@ export default function Home() {
             <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{text}</p></div></article>
           ))}
         </div>
+        <div className="project-visibility">
+          <div><small>إدارة المشروع</small><h3>مشروعك لن يدخل صندوقًا أسود.</h3><p>تعرف في أي مرحلة نحن، وما المطلوب منك، وما الذي سيُسلّم بعد ذلك.</p></div>
+          <ol>{projectFlow.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span>{item}</li>)}</ol>
+        </div>
       </section>
 
       <section className="handoff section" id="handoff">
         <div className="section-heading dark-text">
-          <div><div className="section-label"><span>05</span> ما الذي ستستلمه؟</div><h2>تسليم منظم.<br /><em>وملكية واضحة.</em></h2></div>
-          <p>نغلق المشروع بتسليم عملي يساعدك على الإدارة والانطلاق بثقة، وفق البنود المحددة في عرضك.</p>
+          <div><div className="section-label"><span>05</span> ما الذي ستستلمه؟</div><h2>المشروع لك.<br /><em>وليس رهينة عندنا.</em></h2></div>
+          <p>تستلم المشروع وحساباته بطريقة منظمة تساعدك على الإدارة والتطوير مستقبلًا، وفق البنود المحددة في عرضك.</p>
         </div>
         <div className="handoff-grid">
           {handoff.map((item, index) => <article key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></article>)}
@@ -267,11 +326,11 @@ export default function Home() {
         <div className="studio-about-grid">
           <h2>استوديو رقمي سعودي<br /><em>قريب من عملك.</em></h2>
           <div>
-            <p>نساعد الشركات والمنصات على تحويل أفكارها إلى تجارب رقمية واضحة وقابلة للنمو. نتولى الاستراتيجية وتجربة المستخدم والتصميم والتطوير ضمن مسار واحد.</p>
+            <p>وسيط شوب استوديو سعودي لتصميم وتطوير المنتجات الرقمية. نعمل مباشرة مع أصحاب المشاريع والشركات من فهم الفكرة حتى الإطلاق، دون انتقال المشروع بين عدة جهات.</p>
             <ul>
-              <li>تواصل مباشر طوال المشروع.</li>
+              <li>التصميم والتطوير وإدارة المشروع ضمن مسار واحد.</li>
+              <li>تواصل مباشر وقرارات واضحة طوال التنفيذ.</li>
               <li>حلول مصممة للاحتياج، لا قوالب جاهزة.</li>
-              <li>تسليم موثّق ودعم واضح بعد الإطلاق.</li>
             </ul>
           </div>
         </div>
@@ -298,7 +357,18 @@ export default function Home() {
             <a href="mailto:waseetshop@gmail.com"><b>البريد</b><span>waseetshop@gmail.com</span></a>
           </div>
         </div>
-        <ContactForm />
+        <div className="contact-form-stack">
+          <ContactForm />
+          <div className="after-submit">
+            <h3>ماذا يحدث بعد إرسال الطلب؟</h3>
+            <ol>
+              <li><span>01</span><p><b>نراجع التفاصيل</b><small>نفهم الهدف والنطاق الأولي للمشروع.</small></p></li>
+              <li><span>02</span><p><b>نتواصل عبر واتساب</b><small>نستوضح أي معلومات ناقصة ونرتب الموعد.</small></p></li>
+              <li><span>03</span><p><b>نعقد جلسة اكتشاف</b><small>نناقش الاحتياج والخيارات والأولويات.</small></p></li>
+              <li><span>04</span><p><b>تحصل على نطاق واضح</b><small>عرض مناسب بالمراحل والمخرجات المتفق عليها.</small></p></li>
+            </ol>
+          </div>
+        </div>
       </section>
 
       <footer>

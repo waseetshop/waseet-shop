@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://waseet-shop.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/privacy", "/terms"];
+  const routes = ["", "/work/fit-moment", "/privacy", "/terms"];
 
   return routes.map((route, index) => ({
     url: `${siteUrl}${route}`,

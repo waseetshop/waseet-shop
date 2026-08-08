@@ -36,7 +36,7 @@ export default function ContactForm() {
     ];
 
     window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`, "_blank", "noopener,noreferrer");
-    setMessage("تم تجهيز طلبك وفتح واتساب لإرساله. سنتواصل معك خلال يوم عمل.");
+    setMessage("تم تجهيز طلبك. لإكمال الإرسال، اضغط زر «إرسال» داخل واتساب.");
   }
 
   return (
@@ -76,7 +76,7 @@ export default function ContactForm() {
           <label><span>موعد الإطلاق المتوقع</span><select name="launch" defaultValue=""><option value="">مرن</option><option>خلال شهر</option><option>خلال 2–3 أشهر</option><option>خلال 3–6 أشهر</option></select></label>
         </div>
         <label><span>أخبرنا عن فكرتك</span><textarea name="details" rows={5} placeholder="ما الذي تريد بناءه؟ وما أهم هدف للمشروع؟" /></label>
-        <div className="form-actions"><button type="button" className="button-back" onClick={() => setStep(2)}>السابق</button><button type="submit">إرسال الطلب عبر واتساب <span>↗</span></button></div>
+        <div className="form-actions"><button type="button" className="button-back" onClick={() => setStep(2)}>السابق</button><button type="submit">فتح واتساب لإكمال الإرسال <span>↗</span></button></div>
       </fieldset>
 
       <p className="form-status" role="status" aria-live="polite">{message}</p>
