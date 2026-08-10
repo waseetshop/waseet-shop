@@ -9,7 +9,7 @@ const tajawal = Tajawal({
   variable: "--font-tajawal",
 });
 
-const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://waseet-shop.vercel.app";
+const origin = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.waseet-shop.com";
 const title = "وسيط شوب | تصميم وتطوير المواقع والمنصات الرقمية";
 const description = "استوديو رقمي يصمّم ويطوّر للشركات السعودية مواقع ومتاجر وتطبيقات ويب سريعة وموثوقة تساعد العملاء على اتخاذ القرار.";
 const organizationSchema = {

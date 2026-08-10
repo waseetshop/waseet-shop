@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://waseet-shop.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.waseet-shop.com";
 const pageUrl = `${siteUrl}/work/fit-moment`;
 const liveUrl = "https://fit-moment-web.pages.dev/";
 

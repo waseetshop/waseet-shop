@@ -4,27 +4,31 @@ import ContactForm from "./contact-form";
 const services = [
   {
     number: "01",
-    title: "لدي شركة وأحتاج موقعًا احترافيًا",
+    title: "مواقع الشركات والمؤسسات",
     text: "نبني موقعًا يشرح قيمة شركتك بوضوح، يعزز الثقة، ويحوّل الزيارة إلى فرصة تواصل حقيقية.",
     tags: ["استراتيجية محتوى", "UI/UX", "تطوير متجاوب", "SEO أساسي", "دعم بعد الإطلاق"],
+    href: "/services/corporate-websites",
   },
   {
     number: "02",
-    title: "لدي منتج أو متجر وأريد زيادة التحويل",
+    title: "المتاجر الإلكترونية",
     text: "نصمم رحلة شراء وصفحات حملات تقرّب العميل من القرار، من أول نقرة حتى إتمام الطلب.",
     tags: ["رحلة الشراء", "صفحات المنتجات", "الدفع والشحن", "تتبع التحويل"],
+    href: "/services/ecommerce",
   },
   {
     number: "03",
-    title: "لدي فكرة نظام أو منصة",
+    title: "تطبيقات الويب والأنظمة",
     text: "نحوّل المتطلبات إلى نظام واضح يبسط العمليات ويجمع البيانات ويمنح فريقك مساحة للنمو.",
     tags: ["تحليل المتطلبات", "لوحات إدارة", "قواعد بيانات", "تكاملات", "اختبار وأمان"],
+    href: "/services/web-applications",
   },
   {
     number: "04",
-    title: "لدي موقع قائم لكنه لا يؤدي جيدًا",
-    text: "نراجع المحتوى والتجربة والأداء، ثم نحدد ما يستحق التحسين وما يحتاج إلى إعادة بناء.",
-    tags: ["مراجعة UX", "تحسين المحتوى", "رفع الأداء", "إعادة التصميم", "تطوير مرحلي"],
+    title: "صفحات الهبوط والحملات",
+    text: "نبني صفحة مركزة تكمل رسالة الإعلان وتقود الزائر إلى إجراء واحد واضح وقابل للقياس.",
+    tags: ["رسالة الحملة", "تصميم للتحويل", "تطوير سريع", "نماذج", "تتبع الأحداث"],
+    href: "/services/landing-pages",
   },
 ];
 
@@ -279,12 +283,12 @@ export default function Home() {
         </div>
         <div className="service-list">
           {services.map((service) => (
-            <article className="service-row" key={service.number}>
+            <a className="service-row" href={service.href} key={service.number}>
               <span className="service-number">{service.number}</span>
               <div className="service-title"><h3>{service.title}</h3><span>↗</span></div>
               <p>{service.text}</p>
               <div className="service-tags">{service.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-            </article>
+            </a>
           ))}
         </div>
         <div className="benefit-bar" aria-label="مزايا التسليم">
