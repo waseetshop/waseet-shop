@@ -143,7 +143,7 @@ const socialLinks = [
   { label: "إنستغرام", href: "https://www.instagram.com/waseetshop", icon: "/instagram icon.svg" },
   { label: "تيك توك", href: "https://www.tiktok.com/@waseetshop", icon: "/tiktok icon.png" },
   { label: "X", href: "https://x.com/waseetshop", icon: "/x icon.svg" },
-  { label: "واتساب", href: "https://wa.me/966560301744", icon: "/whatsapp icon.svg" },
+  { label: "واتساب", href: "https://wa.me/966500615614", icon: "/whatsapp icon.svg" },
   { label: "قناة تيليجرام", href: "https://t.me/waseetshop", icon: "/telegram icon.svg" },
   { label: "فيسبوك", href: "https://www.facebook.com/waseetshop1", icon: "/Facebook icon.svg" },
   { label: "البريد الإلكتروني", href: "mailto:waseetshop@gmail.com", icon: "/gmail icon.svg" },
@@ -353,7 +353,7 @@ export default function Home() {
           <p>شاركنا تفاصيل مشروعك، وسنرتب معك جلسة قصيرة لفهم الاحتياج واقتراح الخطوة الأنسب.</p>
           <div className="contact-note"><span>✓</span><p><b>الاستشارة الأولى مجانية — حديث مباشر وعملي دون التزامات.</b></p></div>
           <div className="direct-contact">
-            <a href="https://wa.me/966560301744" target="_blank" rel="noreferrer"><b>واتساب</b><span dir="ltr">0560301744</span></a>
+            <a href="https://wa.me/966500615614" target="_blank" rel="noreferrer"><b>واتساب</b><span dir="ltr">0500615614</span></a>
             <a href="mailto:waseetshop@gmail.com"><b>البريد</b><span>waseetshop@gmail.com</span></a>
           </div>
         </div>
@@ -379,7 +379,7 @@ export default function Home() {
         <div className="footer-contact">
           <p>استوديو رقمي لتصميم وتطوير المواقع والمنصات التي تحوّل الحضور إلى فرص حقيقية.</p>
           <a href="mailto:waseetshop@gmail.com">waseetshop@gmail.com</a>
-          <a href="tel:+966560301744" dir="ltr">+966 56 030 1744</a>
+          <a href="tel:+966500615614" dir="ltr">+966 50 061 5614</a>
         </div>
         <div className="footer-links"><a href="#services">الخدمات</a><a href="#work">الأعمال</a><a href="#process">المنهجية</a><a href="#about">عن وسيط</a><a href="#faq">الأسئلة الشائعة</a><a href="#contact">تواصل معنا</a></div>
         <div className="social-links" aria-label="حسابات وسيط شوب">

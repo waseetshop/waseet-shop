@@ -14,7 +14,7 @@ export default function PrivacyPage() {
       <h2>كيف نستخدم البيانات؟</h2>
       <p>لفهم احتياجك، إعداد الرد أو العرض المناسب، وترتيب جلسة الاكتشاف. لا نبيع بيانات التواصل أو نشاركها لأغراض إعلانية مع أطراف أخرى.</p>
       <h2>التواصل وطلب الحذف</h2>
-      <p>يمكنك طلب تحديث بياناتك أو حذفها عبر <a href="mailto:waseetshop@gmail.com">waseetshop@gmail.com</a> أو واتساب على <a href="https://wa.me/966560301744" dir="ltr">+966 56 030 1744</a>.</p>
+      <p>يمكنك طلب تحديث بياناتك أو حذفها عبر <a href="mailto:waseetshop@gmail.com">waseetshop@gmail.com</a> أو واتساب على <a href="https://wa.me/966500615614" dir="ltr">+966 50 061 5614</a>.</p>
     </main>
   );
 }

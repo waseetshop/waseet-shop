@@ -23,7 +23,7 @@ const organizationSchema = {
       url: origin,
       logo: new URL("/logo.svg", origin).toString(),
       email: "waseetshop@gmail.com",
-      telephone: "+966560301744",
+      telephone: "+966500615614",
       description,
       sameAs: [
         "https://www.instagram.com/waseetshop",

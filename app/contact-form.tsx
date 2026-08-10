@@ -2,7 +2,7 @@
 
 import { FormEvent, useRef, useState } from "react";
 
-const whatsappNumber = "966560301744";
+const whatsappNumber = "966500615614";
 
 export default function ContactForm() {
   const [step, setStep] = useState(1);
